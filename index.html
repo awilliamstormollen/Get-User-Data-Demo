@@ -1,0 +1,51 @@
+<html>
+<head>
+
+<style>
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+h2 {
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid black;
+}
+
+</style>
+
+<link rel="stylesheet" href="../mystyle.css" type="text/css"/>
+
+
+<title>Get User Data Demo</title>
+<link rel="stylesheet" href="mystyle.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<h1>Get User Data Demo</h1>
+<h2>Alexander Williams</h2>
+</head>
+<body>
+<form action='authenticate.php' method='post'>
+<table>
+<tr>
+	<td>Username:</td><td><input type='text' name='username'></td>
+</tr>
+<tr>
+        <td>Password:</td><td><input type='password' name='password'></td>
+</tr>
+<tr>
+	<td colspan='2'><input type='Submit' value='Log In'></td>
+</tr>
+</table>
+</form>
+
+<?php
+	$error = $_GET['error'];
+	if($error == 1)
+		echo "Invalid credetials.";
+?>
+<a href="../index.html"><h3>Link back to ePortfolio</h3></a>
+</body>
+</html>
